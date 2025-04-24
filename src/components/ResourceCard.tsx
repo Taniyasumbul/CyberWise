@@ -48,9 +48,9 @@ const ResourceCard = ({
       <div className="absolute top-3 right-3 z-10">
         <HoverCard>
           <HoverCardTrigger asChild>
-            <div className="p-1 rounded-full bg-cyber-accent/20 text-cyber-accent hover:bg-cyber-accent/30 cursor-help">
+            {/* <div className="p-1 rounded-full bg-cyber-accent/20 text-cyber-accent hover:bg-cyber-accent/30 cursor-help">
               <Lock size={14} />
-            </div>
+            </div> */}
           </HoverCardTrigger>
           <HoverCardContent className="bg-cyber-secondary text-cyber-light border-cyber-accent/30 w-64">
             <p className="text-xs">This resource follows security best practices</p>

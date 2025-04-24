@@ -69,13 +69,14 @@ const Index = () => {
       <Header />
       
       <main className="flex-1">
-        <Hero />
         
+        <Hero />
+       
         <ChatbotWidget />
         
         <InteractiveMediaTool />
         
-        <ToolRecommendations />
+        {/* <ToolRecommendations /> */}
         
         <ReportCrimeButton />
         
@@ -103,7 +104,7 @@ const Index = () => {
           </div>
         </section>
         
-        <SecurityTips />
+        {/* <SecurityTips /> */}
         
         <section id="features" className="py-16 bg-cyber-gradient text-white">
           <div className="cyber-container">
@@ -158,7 +159,7 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center">
-              <Button size="lg" className="bg-cyber-accent hover:bg-cyber-accent/90">
+              <Button asChild size="lg" className="bg-cyber-accent hover:bg-cyber-accent/90">
                 <a href="#chatbot" className="flex items-center gap-2">
                   Get Started
                   <ArrowRight size={18} />

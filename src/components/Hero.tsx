@@ -2,19 +2,28 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ShieldAlert, Lock, ArrowRight } from "lucide-react";
-import heroImage from '../assets/images/security-monitor.jpg';
+
 
 const Hero = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault(); // Prevent default jump
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroImage} 
+          src="./hero_bg.png"
           alt="Cybersecurity Monitor" 
           className="w-full h-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-cyber-primary/90 to-cyber-primary/100" />
+        <div className="absolute inset-0 " />
       </div>
       
       {/* Background pattern */}
@@ -37,14 +46,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-cyber-accent hover:bg-cyber-accent/90">
-                <a href="#chatbot" className="flex items-center gap-2">
+              <Button asChild size="lg" className="bg-cyber-accent hover:bg-cyber-accent/90">
+                <a href="#chatbot"
+                 className="flex items-center gap-2 scroll-smooth">
                   Chat with CyberWise 
                   <ArrowRight size={18} />
                 </a>
               </Button>
-              <Button size="lg" variant="outline">
-                <a href="#resources">Explore Resources</a>
+              <Button asChild size="lg" variant="outline">
+                <a href="#interactive-tools">Explore Resources</a>
               </Button>
             </div>
             

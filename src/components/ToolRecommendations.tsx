@@ -70,7 +70,7 @@ const tools = [
 
 const ToolRecommendations = () => {
   return (
-    <section className="py-16" id="tools">
+    <section className="py-16  bg-[url('./cs11.jpg')] bg-cover bg-center" id="tools">
       <div className="cyber-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Recommended Security Tools</h2>
@@ -79,7 +79,7 @@ const ToolRecommendations = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {tools.map((tool) => (
             <Card key={tool.id} className="bg-cyber-secondary/30 border border-cyber-accent/30 hover:border-cyber-accent/50 transition-all overflow-hidden">
               <CardHeader className="pb-2">
@@ -91,7 +91,7 @@ const ToolRecommendations = () => {
                 </div>
                 <CardTitle>{tool.name}</CardTitle>
                 <div className="flex items-center">
-                  <Badge variant="outline" className="text-xs bg-cyber-accent/10 text-cyber-accent border-cyber-accent/30">
+                  <Badge variant="outline" className="text-xs bg-cyber-accent/10 text-cyber-accent border-cyber-accent/30 mt-2">
                     {tool.category}
                   </Badge>
                   <div className="ml-auto flex items-center">
@@ -108,20 +108,21 @@ const ToolRecommendations = () => {
                 <p className="text-sm text-muted-foreground">{tool.description}</p>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <Button 
+                {/* <Button 
                   variant="outline" 
                   size="sm"
                   className="border-cyber-accent/30 hover:bg-cyber-accent/10"
                 >
                   <Download size={14} className="mr-1" /> Download
-                </Button>
+                </Button> */}
                 <Button 
                   variant="link" 
                   size="sm" 
                   asChild
+                  className='px-0'
                 >
                   <a href={tool.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-cyber-accent">
-                    Learn More <ExternalLink size={14} className="ml-1" />
+                    Learn More <ExternalLink size={14} className="ml-1 " />
                   </a>
                 </Button>
               </CardFooter>

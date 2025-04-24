@@ -56,8 +56,9 @@ const securityTips = [
 
 const SecurityTips = () => {
   return (
-    <section id="tips" className="py-16 bg-gradient-to-b from-muted to-background">
-      <div className="cyber-container">
+    <section id="tips" className="py-16 bg-[url('/cs8.jpg')] bg-cover ">
+      <div className=''>
+      <div className="cyber-container ">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Essential Security Tips</h2>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
@@ -84,6 +85,7 @@ const SecurityTips = () => {
             </Card>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

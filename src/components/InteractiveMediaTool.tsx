@@ -10,7 +10,7 @@ const InteractiveMediaTool = () => {
   const [activeTab, setActiveTab] = useState('videos');
   
   return (
-    <section className="py-16" id="interactive-tools">
+    <section className="py-16 " id="interactive-tools">
       <div className="cyber-container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">Interactive Security Resources</h2>
@@ -51,7 +51,7 @@ const InteractiveMediaTool = () => {
                 </TabsTrigger>
               </TabsList>
               
-              <TabsContent value="videos" className="space-y-4">
+              {/* <TabsContent value="videos" className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-cyber-primary/30 p-4 rounded-lg border border-cyber-accent/20 hover:border-cyber-accent/40 transition-all">
                     <div className="aspect-video bg-cyber-primary/50 rounded-md flex items-center justify-center mb-3">
@@ -70,7 +70,42 @@ const InteractiveMediaTool = () => {
                     <Button variant="outline" size="sm" className="mt-3">Watch Now</Button>
                   </div>
                 </div>
-              </TabsContent>
+              </TabsContent> */}
+              <TabsContent value="videos" className="space-y-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+    <div className="bg-cyber-primary/30 p-4 rounded-lg border border-cyber-accent/20 hover:border-cyber-accent/40 transition-all">
+      <div className="aspect-video bg-cyber-primary/50 rounded-md flex items-center justify-center mb-3">
+        {/* <iframe
+          className="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/exampleVideoID1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe> */}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lpfjNJy8OoA?si=8Szc8v_-luZOWOXs" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+      <h3 className="font-medium mb-1">Phishing Attack Prevention</h3>
+      <p className="text-sm text-muted-foreground">Learn how to identify and avoid falling victim to phishing attacks.</p>
+      <Button variant="outline" size="sm" className="mt-3">Watch Now</Button>
+    </div>
+
+   
+    <div className="bg-cyber-primary/30 p-4 rounded-lg border border-cyber-accent/20 hover:border-cyber-accent/40 transition-all">
+      <div className="aspect-video bg-cyber-primary/50 rounded-md flex items-center justify-center mb-3">
+        {/* <iframe
+          className="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/exampleVideoID2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe> */}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Luh3tBH-8I?si=eXlfPYROmmY5ae1P" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      </div>
+      <h3 className="font-medium mb-1">Cyber Crime</h3>
+      <p className="text-sm text-muted-foreground">Know about Cyber crime</p>
+      <Button variant="outline" size="sm" className="mt-3">Watch Now</Button>
+    </div>
+  </div>
+</TabsContent>
               
               <TabsContent value="simulations" className="space-y-4">
                 <div className="bg-cyber-primary/30 p-6 rounded-lg border border-cyber-accent/20">
